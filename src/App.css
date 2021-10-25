@@ -1,0 +1,200 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #131313;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+  border-radius: 8px;
+  background: cyan;
+}
+
+.character{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.characters__body{
+  display: flex;
+  flex-direction: column;
+}
+
+.c__name{
+  color: white;
+  font-family: 'Whitney';
+  padding-bottom: 5px;
+}
+
+.c__origin{
+  display: flex;
+  flex-direction: column;
+  background: #16d0b5;
+  max-width: fit-content;
+  border-radius: 5px;
+  font-family: 'Whitney';
+  text-align: center;
+}
+
+.c__alive{
+  font-family: 'Whitney';
+  background: #16d0b5;
+}
+
+.c__dead{
+  font-family: 'Whitney';
+  background: red;
+}
+
+.c__unknown{
+  font-family: 'Whitney';
+  background: gray;
+}
+
+.c__location{
+  font-family: 'Whitney';
+  background: #FCE645;
+}
+
+.c__species{
+  font-family: 'Whitney';
+  background: #FB6467FF;
+}
+
+.c__type{
+  font-family: 'Whitney';
+  background: #16d0b5;
+}
+
+.characters{
+  max-width: fit-content;
+}
+
+.characters img{
+  border-radius: 100%;
+}
+
+.search{
+  text-align: center;
+}
+
+.search__form{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.search__form input{
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.search__form input:nth-child(2){
+  font-family: 'Whitney';
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  background: #16d0b5
+}
+
+.error{
+  width: 100%;
+  height: 100vh;
+  background: no-repeat url('https://c.tenor.com/NGpTgyQMg14AAAAd/rick-and-morty-watching.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+.error__content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.error__button{
+  background-color: #16d0b5;
+  font-family: 'Whitney';
+  font-size: 15px;
+  padding: 20px 38px;
+  margin-top: 4%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error__button:hover{
+  box-shadow: 5px 10px 0px 0px wheat;
+}
+
+
+.error__content img{
+  position: absolute;
+  width: 450px;
+  top: 250px;
+  border-radius: 50px;
+  animation: spin 6s infinite linear;
+}
+
+@keyframes spin{
+  0%{transform: translateY(0px)}
+  10%{transform: translateY(15px)}
+  40%{transform: translateY(20px)}
+  60%{transform: translateY(30px)}
+  80%{transform: translateY(-10px)}
+}
+
+
+.error__content h1{
+  color: white;
+  font-family: 'Whitney';
+  margin-top: 18%;
+}
+
+.loader{
+  width: 100%;
+  height: 100%;
+}
+
+.loader__content{
+  margin-top: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader__content h1{
+  color: white;
+  font-family: 'Whitney';
+  margin-top: 15px;
+}
+
+.loader__img{
+  width: 160px;
+  border-radius: 100%;
+  animation: spin 2s linear infinite
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
